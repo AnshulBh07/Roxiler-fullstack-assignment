@@ -1,0 +1,40 @@
+@import "../sass/mixins.scss";
+
+.container-main__statTile {
+  width: 25%;
+  padding: 1rem;
+  border-radius: 10px;
+  @include flexProp(column, 0.8rem, flex-start);
+  align-items: flex-start;
+  box-shadow: 3px 3px 10px #c6c6c6;
+
+  .icon-stats {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .sale {
+    color: rgb(255, 171, 69);
+  }
+
+  .sold {
+    color: rgb(2, 192, 75);
+  }
+
+  .unsold {
+    color: rgb(203, 54, 0);
+  }
+
+  .stat-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #b9b7b7;
+  }
+
+  .stat-value {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #322200;
+    @include flexProp(row, 0rem, center);
+  }
+}

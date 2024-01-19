@@ -1,0 +1,104 @@
+@import "./mixins.scss";
+
+.container-main__productTile {
+  width: 100%;
+  @include flexProp(column, 0rem, flex-start);
+
+  .main-tile {
+    // border: 1px solid black;
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    @include flexProp(row, 0rem, space-between);
+
+    .product-name {
+      width: 30%;
+      @include flexProp(row, 1rem, space-between);
+      font-size: 0.8rem;
+
+      .container-img {
+        width: 15%;
+        height: 4rem;
+        @include flexProp(row, 0rem, center);
+
+        .product-img {
+          height: 3.5rem;
+          width: 3.5rem;
+          border-radius: 5px;
+        }
+      }
+
+      .container-info {
+        @include flexProp(column, 0.3rem, flex-start);
+        align-items: flex-start;
+        width: 85%;
+        font-weight: 500;
+        color: rgb(92, 92, 92);
+
+        .product-id {
+          color: rgb(174, 174, 174);
+        }
+      }
+    }
+
+    .category {
+      width: 20%;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgb(92, 92, 92);
+    }
+
+    .description {
+      width: 10%;
+      @include flexProp(row, 0rem, center);
+
+      .btn-show-desc {
+        padding: 0.1rem;
+        display: grid;
+        place-items: center;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        .icon-more {
+          height: 1.3rem;
+          width: 1.3rem;
+          color: #fc7f03;
+        }
+      }
+    }
+
+    .price {
+      width: 15%;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgb(92, 92, 92);
+
+      @include flexProp(row, 0.1rem, center);
+    }
+
+    .sold-status {
+      width: 10%;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-align: center;
+    }
+
+    .date {
+      width: 15%;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-align: center;
+    }
+  }
+
+  .description-container {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(112, 112, 112);
+    padding: 0.7rem;
+    border-top: 1px solid rgb(112, 112, 112);
+    text-transform: none;
+  }
+}

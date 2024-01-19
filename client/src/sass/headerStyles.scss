@@ -1,0 +1,91 @@
+@import "../sass/mixins.scss";
+
+.container-main__header {
+  width: 100%;
+  @include flexProp(row, 0rem, space-between);
+
+  .header-title {
+    font-family: "poppins", sans-serif;
+    color: #2b1000;
+    font-weight: 600;
+  }
+
+  .search-fields {
+    @include flexProp(row, 1rem, space-between);
+
+    .label-keyword {
+      @include flexProp(row, 0rem, space-between);
+      position: relative;
+
+      .search-bar {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(248, 248, 248);
+
+        &::placeholder {
+          font-size: 0.7rem;
+          opacity: 0.8;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .btn-search {
+        display: grid;
+        place-items: center;
+        height: 1.8rem;
+        width: 1.8rem;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        left: 85%;
+        cursor: pointer;
+
+        .icon-search {
+          height: 70%;
+          width: 70%;
+          color: #696969;
+        }
+      }
+    }
+
+    .month-selection-box {
+      height: 1.9rem;
+      width: 7rem;
+      padding: 0rem 0.5rem;
+      border-radius: 5px;
+    }
+  }
+
+  .profile-info {
+    @include flexProp(row, 0.8rem, space-between);
+
+    .btn-notification {
+      padding: 0.6rem;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+
+      .icon-bell {
+        height: 1.2rem;
+        width: 1.2rem;
+        color: #696969;
+      }
+    }
+
+    .username {
+      font-weight: 500;
+    }
+
+    .user-pic {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 10px;
+    }
+  }
+}

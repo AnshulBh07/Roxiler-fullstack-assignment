@@ -1,0 +1,55 @@
+@import "../sass/mixins.scss";
+
+.container-main__navbar {
+  height: 100%;
+  width: 20%;
+  background-color: #fff;
+  padding-top: 2rem;
+  @include flexProp(column, 5rem, flex-start);
+
+  .container-nav__logo {
+    @include flexProp(row, 0rem, flex-start);
+    width: 70%;
+
+    .logo {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-family: "poppins", sans-serif;
+      color: #fc7f03;
+    }
+  }
+
+  .container-nav__links {
+    width: 70%;
+    @include flexProp(column, 3rem, flex-start);
+    align-items: flex-start;
+    list-style-type: none;
+
+    .navbar-item {
+      width: 100%;
+      @include flexProp(row, 2rem, flex-start);
+
+      .icon-nav {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: #c1c2c0;
+      }
+
+      .navitem-link {
+        text-decoration: none;
+        color: #c1c2c0;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .navitem-link:active {
+        color: #fc7f03;
+      }
+    }
+  }
+}

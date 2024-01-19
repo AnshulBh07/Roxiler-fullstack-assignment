@@ -1,0 +1,89 @@
+@import "../sass/mixins.scss";
+
+.container-main__panel {
+  width: 80%;
+  background-color: #fff;
+  height: 100vh;
+  @include flexProp(column, 4rem, flex-start);
+  padding: 1rem;
+
+  .container-panel__data {
+    width: 100%;
+    @include flexProp(column, 3rem, flex-start);
+
+    .container__statistics {
+      width: 100%;
+      @include flexProp(row, 1rem, flex-start);
+    }
+  }
+
+  .container__products {
+    width: 100%;
+    @include flexProp(column, 2rem, flex-start);
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: rgb(38, 21, 0);
+    }
+
+    .products__table {
+      width: 100%;
+      text-transform: capitalize;
+      @include flexProp(column, 0.5rem, flex-start);
+
+      .products-list__headings {
+        @include flexProp(row, 0rem, space-between);
+        width: 100%;
+
+        & p {
+          font-family: "poppins", sans-serif;
+          font-weight: 600;
+          color: rgb(194, 194, 194);
+          font-size: 0.9rem;
+        }
+
+        .p-name {
+          width: 30%;
+        }
+
+        .p-category {
+          width: 20%;
+          text-align: center;
+        }
+
+        .p-description {
+          width: 10%;
+          text-align: center;
+        }
+
+        .p-price {
+          width: 15%;
+          text-align: center;
+        }
+
+        .p-sold {
+          width: 10%;
+          text-align: center;
+        }
+
+        .p-date {
+          width: 15%;
+          text-align: center;
+        }
+      }
+
+      & hr {
+        width: 100%;
+        border: 1px solid;
+        border-color: rgb(194, 194, 194);
+      }
+    }
+  }
+
+  .container__charts {
+    width: 100%;
+    @include flexProp(row, 1rem, space-between);
+  }
+}
